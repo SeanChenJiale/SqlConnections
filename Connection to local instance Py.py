@@ -56,7 +56,7 @@ config = {
 cnx = connect_to_mysql(config, attempts=3)
 if cnx and cnx.is_connected():
     with cnx.cursor() as cursor:
-        cursor.execute("SELECT * FROM common_values_str ")
+        cursor.execute("SELECT * FROM common_values_str ")  # this is an sql statement.
         column_Names  = cursor.description
         result = [{column_Names[index][0]: column for index, column in enumerate(value)} for value in cursor.fetchall()]
         df = DataFrame(result)
