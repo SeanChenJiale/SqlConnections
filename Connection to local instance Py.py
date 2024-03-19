@@ -10,11 +10,7 @@ import logging
 import time
 import mysql.connector 
 from pandas import DataFrame
-# conn = mysql.connector.connect(user = 'root',
-#                                host = 'localhost',
-#                               database = 'seanutsii',
-#                               password = '<inputpasswordhere>')
- 
+
 # Set up logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
